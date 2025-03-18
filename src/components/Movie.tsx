@@ -14,13 +14,13 @@ const Movie = ({movie}: IMovieProps) => {
             <h2 className="text-center">by {movie.director}</h2>
             </div>
             <p className="font-bold">{movie.year}</p>
-            <p>{movie.duration}</p>
+            {/* <p>{movie.duration}</p> */}
             <h2 className="font-bold">⭐️ {movie.rate}</h2>
-           <div className="flex flex-col items-center gap-1">
+           {/* <div className="flex flex-col items-center gap-1">
            {movie.genre.map((genre)=> (
                 <p key={crypto.randomUUID()}>{genre}</p>
             ))}
-           </div>
+           </div> */}
         </>
      );
 }
