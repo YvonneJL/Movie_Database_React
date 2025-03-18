@@ -19,6 +19,8 @@ export interface IMovieStateProps {
     setFilterMovie: (filterMovie: string) => void
     searchedMovies: IMovie[]
     setSearchedMovies: (filterMovie: IMovie[]) => void
+    selectedMovie: IMovie
+    setSelectedMovie: (selectedMovie: IMovie) => void
 }
 
 export interface IMovieProps {

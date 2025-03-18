@@ -12,10 +12,11 @@ const MainProvider = ({children}: {children: React.ReactNode}) => {
 const [allMovies, setAllMovies] = useState<IMovie[]>(movies)
 const [filterMovie, setFilterMovie] = useState<string>("")
 const [searchedMovies, setSearchedMovies] = useState<IMovie[]>()
+const [selectedMovie, setSelectedMovie] = useState<IMovie | null>(null);
 
 
     return ( 
-        <mainContext.Provider value={{allMovies, setAllMovies, filterMovie, setFilterMovie, searchedMovies, setSearchedMovies}}>
+        <mainContext.Provider value={{allMovies, setAllMovies, filterMovie, setFilterMovie, searchedMovies, setSearchedMovies, selectedMovie, setSelectedMovie}}>
             {children}
         </mainContext.Provider>
      );
