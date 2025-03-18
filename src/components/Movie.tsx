@@ -1,11 +1,10 @@
+
 import { IMovie, IMovieProps } from "../interfaces";
 
 
 
 
 const Movie = ({movie}: IMovieProps) => {
-
-    
     
     return ( 
         <>

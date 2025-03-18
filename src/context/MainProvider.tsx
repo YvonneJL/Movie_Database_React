@@ -4,7 +4,7 @@ import movies from "../data";
 
 export const mainContext = createContext({})
 //! add genre filter
-//! Routes to MovieDetail
+//! Content MovieDetail
 
 
 const MainProvider = ({children}: {children: React.ReactNode}) => {
