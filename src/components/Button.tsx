@@ -1,6 +1,6 @@
 import { IButtonProps } from "../interfaces";
 
-
+//Übergabe Funktion un dInhalt über Props
 const Button = ({name, onClickFunction}: IButtonProps) => {
 
     return (

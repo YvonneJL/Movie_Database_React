@@ -1,10 +1,10 @@
 import { createBrowserRouter, createRoutesFromElements, Route, Router, RouterProvider, Routes } from "react-router-dom"
 import Home from "./pages/Home"
 import MovieDetail from "./pages/MovieDetail"
-import { IMovieProps } from "./interfaces"
 
 
-function App({movie}: IMovieProps) {
+
+function App() {
 
   const router = createBrowserRouter(createRoutesFromElements(
     <Route path='/' element={""}>

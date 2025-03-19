@@ -1,8 +1,7 @@
 import { useContext } from "react";
-import movies from "../data";
 import Button from "./Button";
-import { IMovie, IMovieStateProps } from "../interfaces";
-import { mainContext } from "../context/Mainprovider";
+import { IMovieStateProps } from "../interfaces";
+import { mainContext } from "../context/MainProvider";
 
 
 const Nav = () => {
@@ -10,6 +9,7 @@ const Nav = () => {
 
     const {allMovies, setAllMovies} = useContext(mainContext) as IMovieStateProps
 
+    //Funktionen für die Sortierbuttons
     const sortByRating = () => {
         const sortedMovies = [...allMovies].sort((a,b)=> Number(b.rate) - Number(a.rate))
         setAllMovies(sortedMovies)
@@ -38,7 +38,7 @@ const Nav = () => {
 
     return ( 
         <nav className="flex flex-col lg:flex-row lg:justify-between gap-2">
-            <Button onClickFunction={sortByRating} name={"Sort By Date Ascending"}/>
+            <Button onClickFunction={sortByDateAscending} name={"Sort By Date Ascending"}/>
             <Button onClickFunction={sortByDateDescending} name={"Sort By Date Descending"}/>
             <Button onClickFunction={sortByRating} name={"Best Rate"}/>
             <Button onClickFunction={sortByNameAtoZ} name={"A - Z"}/>

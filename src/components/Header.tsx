@@ -1,4 +1,4 @@
-import { useContext, useEffect, useRef, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import Nav from "./Nav"
 import { mainContext } from "../context/Mainprovider";
 import { IMovieStateProps } from "../interfaces";
@@ -7,27 +7,19 @@ import movies from "../data";
 
 const Header = () => {
 
-    const {allMovies, setAllMovies, filterMovie, setFilterMovie, searchedMovies, setSearchedMovies} = useContext(mainContext) as IMovieStateProps
-
+    const {setAllMovies} = useContext(mainContext) as IMovieStateProps
     const [input, setInput] = useState<string>("")
 
-//     const inputFilterByTitle = useRef<HTMLInputElement>(null || "");
-// console.log(inputFilterByTitle);
-console.log(input);
-
+//Filterfunktion für das Inputfeld--> Suche nach Titel
+//Funktionier zusammen mit onChange und value beim Inputfeld
 useEffect(()=> {
     if (input.length <= 0) {
         setAllMovies(movies)
     } else {
-        //setFilterMovie(input)
-
         const filteredMovies = movies.filter((movie)=> {
             return movie.title.toLowerCase().includes(input.toLowerCase())
         })
-        // setSearchedMovies(filteredMovies)
         setAllMovies(filteredMovies)
-
-
 }
 }, [input])
 

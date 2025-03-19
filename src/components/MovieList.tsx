@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import Movie from "./Movie";
 import { mainContext } from "../context/Mainprovider";
-import { IMovieProps, IMovieStateProps } from "../interfaces";
+import { IMovieStateProps } from "../interfaces";
 import { Link, useParams } from "react-router-dom";
 
 
@@ -14,7 +14,8 @@ const MovieList = () => {
 
     const {movieParam} = useParams()
 
-
+// hier wird über movie State gemapped, um je einen in Movie.tsx zu rendern
+//gleichzeitig wird beim Klick auf je einen der Filme setSelectedMovies mit den Daten dieses Films gefüllt, umihn bei MovieDetail.tsx zu rendern
     return ( 
         <section className="flex flex-col gap-5 px-5 text-white lg:grid lg:grid-cols-3 pb-5">
             {allMovies?.map((movie)=> (

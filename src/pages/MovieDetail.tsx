@@ -1,13 +1,13 @@
 import { useContext } from "react";
-import Movie from "../components/Movie";
-import { IMovieProps, IMovieStateProps } from "../interfaces";
+import { IMovieStateProps } from "../interfaces";
 import { mainContext } from "../context/Mainprovider";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const MovieDetail = () => {
 
 const { selectedMovie } = useContext(mainContext) as IMovieStateProps
 
+//Um per Klick des Emojis unten eine Route zurück zu navigieren
 const navigate = useNavigate()
 
     return (
