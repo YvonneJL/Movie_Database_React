@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { IMovieStateProps } from "../interfaces";
-import { mainContext } from "../context/Mainprovider";
+import { mainContext } from "../context/MainProvider";
 import { useNavigate } from "react-router-dom";
 
 const MovieDetail = () => {

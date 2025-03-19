@@ -1,6 +1,6 @@
 import { useContext, useEffect, useState } from "react";
 import Nav from "./Nav"
-import { mainContext } from "../context/Mainprovider";
+import { mainContext } from "../context/MainProvider";
 import { IMovieStateProps } from "../interfaces";
 import movies from "../data";
 

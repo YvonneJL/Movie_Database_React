@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import Movie from "./Movie";
-import { mainContext } from "../context/Mainprovider";
+import { mainContext } from "../context/MainProvider";
 import { IMovieStateProps } from "../interfaces";
 import { Link, useParams } from "react-router-dom";
 
